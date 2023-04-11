@@ -17,3 +17,8 @@
 	@include adaptiveValue("font-size", 51, 24);
 	line-height: 121.568627%; /* 62/51 */
 }
+
+.text {
+	@include adaptiveValue("font-size", 18, 16);
+	line-height: 138.888889%; /* 25/18 */
+}

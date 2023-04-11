@@ -12,6 +12,16 @@
 	}
 	// .page__mission
 	&__mission {
+		@include adaptiveValue("margin-bottom", 180, 30);
+	}
+	// .page__scanner
+	&__scanner {
+		@include adaptiveValue("padding-bottom", 100, 30);
+	}
+	// .page__integration
+	&__integration {
+		@include adaptiveValue("padding-top", 100, 30);
+		@include adaptiveValue("padding-bottom", 100, 30);
 	}
 }
 //==========================================================================================================================
@@ -116,7 +126,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				&::before {
-					background: rgba(96, 92, 234, 0.7);
+					background: rgba(96, 92, 234, 0.8);
 				}
 			}
 		}
@@ -153,7 +163,7 @@
 		@media (any-hover: hover) {
 			img {
 				&:hover {
-					box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+					box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
 				}
 			}
 		}
@@ -315,5 +325,211 @@
 	// .mission__text
 	&__text {
 		line-height: 138.888889%; /* 25/18 */
+	}
+}
+
+//==========================================================================================================================
+
+.scanner {
+	// .scanner__bg-ibg
+	&__bg-ibg {
+		padding-bottom: percent(1060, 1450);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
+		}
+	}
+	// .scanner__container
+	&__container {
+		position: relative;
+		z-index: 3;
+	}
+	// .scanner__inner
+	&__inner {
+		display: grid;
+		@media (min-width: $mobile) {
+			grid-template-columns: percent(720, 1240) 1fr;
+			column-gap: rem(20);
+			margin-top: -50%;
+		}
+		@media (max-width: $mobile) {
+			row-gap: rem(70);
+			margin-top: -20%;
+		}
+	}
+	// .scanner__images
+	&__images {
+		display: grid;
+		@include adaptiveValue("gap", 50, 25, 1240, 768, 1);
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			order: 2;
+		}
+	}
+	// .scanner__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(668, 333);
+	}
+	// .scanner__content
+	&__content {
+		align-self: end;
+		@media (min-width: $mobile) {
+			padding-bottom: rem(70);
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+		}
+		@media (max-width: $mobile) {
+			order: 1;
+		}
+	}
+	// .scanner__body
+	&__body {
+		@media (min-width: $mobile) {
+			max-width: rem(400);
+		}
+	}
+	// .scanner__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(24, 51);
+		}
+	}
+	// .scanner__text
+	&__text {
+	}
+}
+
+//==========================================================================================================================
+
+.integration {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: rem(430);
+		height: rem(430);
+		background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+		opacity: 0.1;
+		filter: blur(125px);
+		transform: rotate(5.78deg);
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 0.15;
+			}
+		}
+	}
+	// .integration__container
+	&__container {
+	}
+	// .integration__inner
+	&__inner {
+		display: grid;
+		row-gap: rem(20);
+		@media (min-width: $mobile) {
+			column-gap: rem(30);
+			grid-template-columns: 1fr percent(720, 1240);
+		}
+	}
+	// .integration__content
+	&__content {
+		@media (min-width: $mobile) {
+			@include adaptiveValue("padding-top", 200, 100, 1240, 768, 1);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-top", 100, 30, 768, 320, 1);
+		}
+	}
+	// .integration__body
+	&__body {
+	}
+	// .integration__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(23, 51);
+		}
+	}
+	// .integration__text
+	&__text {
+	}
+	// .integration__images
+	&__images {
+		position: relative;
+		@include adaptiveValue("min-height", 720, 450);
+	}
+	// .integration__image
+	&__image {
+		display: inline-block;
+		position: absolute;
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		// .integration__image_1
+		&_1 {
+			top: percent(102, 720);
+			left: percent(312, 720);
+			@include adaptiveValue("width", 252, 144);
+			@include adaptiveValue("height", 150, 86);
+		}
+		// .integration__image_2
+		&_2 {
+			top: percent(286, 720);
+			left: percent(132, 720);
+			@include adaptiveValue("width", 233, 110);
+			@include adaptiveValue("height", 45, 22);
+		}
+		// .integration__image_3
+		&_3 {
+			bottom: percent(258, 720);
+			left: 0;
+			@include adaptiveValue("width", 198, 91);
+			@include adaptiveValue("height", 119, 56);
+		}
+		// .integration__image_4
+		&_4 {
+			bottom: percent(212, 720);
+			left: percent(254, 720);
+			@include adaptiveValue("width", 198, 91);
+			@include adaptiveValue("height", 119, 56);
+			z-index: 1;
+		}
+		// .integration__image_5
+		&_5 {
+			bottom: percent(247, 720);
+			right: percent(100, 720);
+			@include adaptiveValue("width", 182, 85);
+			@include adaptiveValue("height", 193, 90);
+		}
+		// .integration__image_6
+		&_6 {
+			bottom: percent(112, 720);
+			left: percent(181, 720);
+			@include adaptiveValue("width", 198, 91);
+			@include adaptiveValue("height", 119, 56);
+		}
+		// .integration__image_7
+		&_7 {
+			bottom: percent(45, 720);
+			right: percent(15, 720);
+			@include adaptiveValue("width", 281, 181);
+			@include adaptiveValue("height", 56, 35);
+		}
 	}
 }
