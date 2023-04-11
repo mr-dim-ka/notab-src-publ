@@ -8,3 +8,12 @@
 	line-height: 200%; /* 70/35 */
 	text-transform: uppercase;
 }
+
+//==========================================================================================================================
+
+.title {
+	@extend %ff-mont;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 51, 24);
+	line-height: 121.568627%; /* 62/51 */
+}
