@@ -1,54 +1,65 @@
 //====================================================================================================
 
-//====================================================================================================
+.header {
+	@include adaptiveValue("padding-top", 25, 40);
+	@include adaptiveValue("padding-bottom", 25, 10);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	// .header__container
+	&__container {
+	}
+	// .header__inner
+	&__inner {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 108, 30, 1240, 768, 1);
+		@media (max-width: $mobile) {
+			justify-content: space-between;
+		}
+	}
+	// .header__logo
+	&__logo {
+		flex: 0 0 rem(220);
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(150);
+		}
 
-//Burger
-/*
-.icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
+		img {
+			max-width: 100%;
 		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
+	}
+	// .header__login
+	&__login {
 		span {
-			top: calc(50% - rem(1));
+			border-bottom: 1px solid #fff;
+			padding-bottom: rem(3);
+			transition: all 0.3s ease 0s;
 		}
-		.menu-open & {
-			span {
-				width: 0;
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					border-bottom: 1px solid transparent;
+				}
 			}
-			&::before,
-			&::after {
-			}
+		}
+		@media (min-width: $mobile) {
+			padding-left: rem(40);
+			display: flex;
+			align-items: center;
+			column-gap: rem(12);
+			// position: relative;
 			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
+				content: "";
+				display: block;
+				width: rem(26);
+				height: rem(25);
+				background: url("../img/login.svg") 0 0 no-repeat;
 			}
 		}
 	}
 }
-*/
+
+//==========================================================================================================================

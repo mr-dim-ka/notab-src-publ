@@ -1,3 +1,208 @@
 //====================================================================================================
 
+.page {
+	// .page__mainpage
+	&__mainpage {
+		padding-top: rem(170);
+	}
+	// .page__actions
+	&__actions {
+		@include adaptiveValue("padding-top", 180, 70);
+		@include adaptiveValue("padding-bottom", 180, 70);
+	}
+}
+.mainpage {
+	background: url("../img/mainpage/blur-bg.svg") 100% 0 no-repeat;
+	// .mainpage__container
+	&__container {
+	}
+	// .mainpage__top
+	&__top {
+		display: grid;
+		grid-template-columns: 50% 1fr;
+		column-gap: rem(15);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 80, 40);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 65% 1fr;
+		}
+	}
+	// .mainpage__content
+	&__content {
+	}
+	// .mainpage__images
+	&__images {
+		justify-self: end;
+	}
+	// .mainpage__image
+	&__image {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(255, 255, 255, 0.2);
+			filter: blur(78.8812px);
+		}
+		img {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	// .mainpage__app
+	&__app {
+	}
+}
+.content-mainpage {
+	@include adaptiveValue("padding-top", 130, 70);
+	// .content-mainpage__title
+	&__title {
+		@extend %ff-mont;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 64, 35);
+		line-height: 109.375%; /* 70/64 */
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 25);
+		}
+	}
+	// .content-mainpage__text
+	&__text {
+		@extend %ff-noto;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: 135%; /* 27/20 */
+		position: relative;
+		@media (min-width: $mobile) {
+			padding-left: rem(105);
+			padding-top: rem(75);
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: rem(125);
+				height: rem(125);
+				border-radius: 50%;
+				background: rgba(96, 92, 234, 0.5);
+				filter: blur(50px);
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: -5%;
+				width: rem(140);
+				height: rem(4);
+				background-color: #fff;
+				transform: rotate(120.61deg);
+			}
+		}
+	}
+}
+.app-mainpage {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: rem(25);
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
+	// .app-mainpage__text
+	&__text {
+	}
+	// .app-mainpage__items
+	&__items {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(25);
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+	&__app-stote,
+	&__google-play {
+		img {
+			border-radius: rem(7);
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			img {
+				&:hover {
+					box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+				}
+			}
+		}
+	}
+	// .app-mainpage__app-stote
+	&__app-stote {
+	}
+	// .app-mainpage__google-play
+	&__google-play {
+	}
+}
+.app-store {
+}
+.app-google-play {
+}
+
 //====================================================================================================
+
+.actions {
+	// .actions__container
+	&__container {
+	}
+	// .actions__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(352), 1fr));
+		@include adaptiveValue("gap", 40, 30);
+	}
+	// .actions__item
+	&__item {
+		display: flex;
+		justify-content: center;
+	}
+}
+.item-actions {
+	height: 100%;
+	max-width: rem(503);
+	width: 100%;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: rem(21.3671);
+	@include adaptiveValue("padding-top", 60, 40);
+	@include adaptiveValue("padding-bottom", 60, 40);
+	@include adaptiveValue("padding-left", 55, 30);
+	@include adaptiveValue("padding-right", 55, 30);
+	@extend %ff-noto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// .item-actions__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: 136.666667%; /* 41/30 */
+		&:not(:last-child) {
+			margin-bottom: em(30, 30);
+		}
+	}
+	// .item-actions__link
+	&__link {
+		align-self: flex-start;
+		font-weight: 400;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 137.5%; /* 33/24 */
+		border-bottom: 1px solid #fff;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+}

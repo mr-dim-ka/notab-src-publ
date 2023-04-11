@@ -1,1 +1,10 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.app-text {
+	@extend %ff-mont;
+	font-weight: 700;
+	font-size: 35px;
+	@include adaptiveValue("font-size", 35, 24);
+	line-height: 200%; /* 70/35 */
+	text-transform: uppercase;
+}
