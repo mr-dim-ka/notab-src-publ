@@ -27,7 +27,6 @@
 	// .footer__inner
 	&__inner {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: rem(30);
 		@media (max-width: $mobileSmall) {

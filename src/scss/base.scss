@@ -137,3 +137,9 @@
 %ff-avenir {
 	font-family: Avenir;
 }
+// фон и размытие декора блоков
+%bg-blur {
+	background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+	filter: blur(125px);
+	transform: rotate(5.78deg);
+}
