@@ -26,14 +26,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="mainpage__app app-mainpage">
-							<div class="app-mainpage__text app-text">DOWNLOAD OUR APP</div>
-							<div class="app-mainpage__items">
-								<a class="app-mainpage__app-stote app-store" href="#">
-									<img src="@img/mainpage/app-store.svg" alt="app store">
+						<div class="mainpage__app app">
+							<div class="app__text">DOWNLOAD OUR APP</div>
+							<div class="app__items">
+								<a class="app__app-stote app-store" href="#">
+									<img src="@img/app-store.svg" alt="app store">
 								</a>
-								<a class="app-mainpage__google-play app-google-play" href="#">
-									<img src="@img/mainpage/google-play.svg" alt="google play">
+								<a class="app__google-play app-google-play" href="#">
+									<img src="@img/google-play.svg" alt="google play">
 								</a>
 							</div>
 						</div>
@@ -159,10 +159,10 @@
 										</p>
 										<div class="code__apps">
 											<a class="app-store" href="#">
-												<img src="@img/mainpage/app-store.svg" alt="app store">
+												<img src="@img/app-store.svg" alt="app store">
 											</a>
 											<a class="app-google-play" href="#">
-												<img src="@img/mainpage/google-play.svg" alt="google play">
+												<img src="@img/google-play.svg" alt="google play">
 											</a>
 										</div>
 									</div>
@@ -258,6 +258,53 @@
 						</div>
 					</div>
 				</div>
+				<section class="page__connection connection">
+					<div class="connection__container">
+						<div class="connection__header">
+							<div class="connection__info">
+								<h2 class="connection__title title">Get In Touch</h2>
+								<p class="connection__text text">
+									Have questions about Noble or just want to say hello? Drop us a line and a member of our team will getback to you shortly.
+								</p>
+							</div>
+						</div>
+						<form class="connection__form form-connection" action="#">
+							<div class="form-connection__line">
+								<input class="form-connection__input" type="text" name="form[]" data-error="Ошибка" placeholder="Name" autocomplete="off">
+							</div>
+							<div class="form-connection__line">
+								<input class="form-connection__input" type="text" name="form[]" data-error="Ошибка" placeholder="Venue Name" autocomplete="off">
+							</div>
+							<div class="form-connection__line form-connection__line_city">
+								<input class="form-connection__input form-connection__input_city" type="text" name="form[]" data-error="Ошибка" placeholder="Venue City" autocomplete="off">
+								<input class="form-connection__input form-connection__input_city" type="text" name="form[]" data-error="Ошибка" placeholder="State City" autocomplete="off">
+							</div>
+							<div class="form-connection__line">
+								<input class="form-connection__input" type="email" name="form[]" data-error="Ошибка" placeholder="Email" autocomplete="off">
+							</div>
+							<div class="form-connection__line">
+								<input class="form-connection__input" type="text" name="form[]" data-error="Ошибка" placeholder="Subject" autocomplete="off">
+							</div>
+							<div class="form-connection__line form-connection__line_textarea">
+								<textarea class="form-connection__textarea" placeholder="Message"></textarea>
+							</div>
+							<div class="form-connection__button">
+								<button class="form-connection__btn" type="submit">Send</button>
+							</div>
+						</form>
+						<div class="connection__app app">
+							<div class="app__text">DOWNLOAD OUR APP</div>
+							<div class="app__items">
+								<a class="app__app-stote app-store" href="#">
+									<img src="@img/app-store.svg" alt="app store">
+								</a>
+								<a class="app__google-play app-google-play" href="#">
+									<img src="@img/google-play.svg" alt="google play">
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

@@ -1,12 +1,31 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-.app-text {
-	@extend %ff-mont;
-	font-weight: 700;
-	font-size: 35px;
-	@include adaptiveValue("font-size", 35, 24);
-	line-height: 200%; /* 70/35 */
-	text-transform: uppercase;
+.app {
+	// .app__text
+	&__text {
+		@extend %ff-mont;
+		font-weight: 700;
+		font-size: 35px;
+		@include adaptiveValue("font-size", 35, 24);
+		line-height: 200%; /* 70/35 */
+		text-transform: uppercase;
+	}
+	// .app__items
+	&__items {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(25);
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+	// .app__app-stote
+	&__app-stote {
+	}
+	// .app__google-play
+	&__google-play {
+	}
 }
 
 //==========================================================================================================================
