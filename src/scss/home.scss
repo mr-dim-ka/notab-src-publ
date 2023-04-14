@@ -16,8 +16,8 @@
 	}
 	// .page__mission
 	&__mission {
-		@include adaptiveValue("margin-top", 180, 30);
-		@include adaptiveValue("padding-bottom", 280, 0, 1240, 768, 1);
+		@include adaptiveValue("margin-top", 80, 30);
+		@include adaptiveValue("padding-bottom", 80, 0);
 	}
 	// .page__scanner
 	&__scanner {
@@ -299,16 +299,9 @@
 	}
 	// .mission__image
 	&__image {
+		animation: animPhone 3s ease 0.3s;
 		img {
 			max-width: 100%;
-		}
-		@media (min-width: $mobile) {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: rem(500);
-			width: rem(300);
-			@include adaptiveValue("width", 750, 450, 1240, 768, 1);
 		}
 	}
 	// .mission__content
