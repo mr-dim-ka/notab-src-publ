@@ -173,9 +173,21 @@
 .cookie {
 	font-size: rem(14);
 	line-height: 135.714286%; /* 19/14 */
-
 	background-color: #212834;
 	padding: rem(25) 0;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	left: 0;
+	bottom: -100%;
+	transition: all 0.8s ease 0.2s;
+	.loaded & {
+		bottom: 0;
+	}
+	&.hidden {
+		transition: all 1.6s ease 0s;
+		bottom: -100%;
+	}
 	// .cookie__container
 	&__container {
 	}

@@ -13,3 +13,13 @@ function addClassLoaded() {
 }
 
 addClassLoaded();
+
+/* const cookie = document.querySelector('.cookie');
+const cookieBtn = document.querySelector('.cookie__btn'); */
+
+document.addEventListener("click", function (e) {
+	const targetEl = e.target;
+	if (targetEl.closest('.cookie__btn')) {
+		targetEl.closest('.cookie').classList.add('hidden');
+	}
+});
