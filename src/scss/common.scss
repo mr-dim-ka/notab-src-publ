@@ -60,7 +60,7 @@
 }
 //==========================================================================================================================
 
-// animation: animPhone 3s ease 0.3s;
+// animation: animPhone 3s ease 0 forwards;
 @keyframes animPhone {
 	0% {
 		transform: translate(-200%, 0px) rotate(90deg);
@@ -73,5 +73,17 @@
 
 	100% {
 		transform: translate(0%, 0px) rotate(0deg);
+	}
+}
+
+// animation: animText 3s ease 0 forwards;
+@keyframes animText {
+	0% {
+		transform: translate(0%, 0px);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(200%, 0px) rotate(0deg);
+		opacity: 0;
 	}
 }

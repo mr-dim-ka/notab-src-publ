@@ -281,7 +281,12 @@
 	position: relative;
 	&._active {
 		.mission__image {
-			animation: animPhone 3s ease 0.3s forwards;
+			animation: animPhone 3s ease 0.1s forwards;
+			transition: all 0.3s ease 1s;
+		}
+		.mission__body {
+			animation: animText 3s ease 0.1s forwards;
+			transition: all 0.3s ease 1s;
 		}
 	}
 	// .mission__container

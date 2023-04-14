@@ -115,4 +115,8 @@ if (missionBlock) {
 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 	}
+
+	setTimeout(() => {
+		addToScroll();
+	}, 300);
 }
